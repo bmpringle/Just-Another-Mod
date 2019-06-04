@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "III",
+        "IHI",
+        "III"
+    ],
+    "key": {
+        "I": {
+            "item": "minecraft:iron_ingot"
+        },
+        "H": {
+            "item": "anothermod:hammer"
+        }
+    },
+    "result": {
+        "item": "anothermod:compressediron"
+    }
+}

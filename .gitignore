@@ -1,0 +1,48 @@
+# eclipse
+bin
+*.launch
+.settings
+.metadata
+.classpath
+.project
+
+# idea
+out
+*.ipr
+*.iws
+*.iml
+.idea
+
+# gradle
+build
+.gradle
+
+# other
+eclipse
+run
+
+#.gitignore#
+.DS_Store
+CREDITS.txt
+LICENSE-Paulscode IBXM Library.txt
+LICENSE-Paulscode SoundSystem CodecIBXM.txt
+LICENSE.txt
+README.txt
+build.gradle
+forge-1.12.2-14.23.5.2768-changelog.txt
+gradle.properties
+gradle/wrapper/gradle-wrapper.jar
+gradle/wrapper/gradle-wrapper.properties
+gradlew
+gradlew.bat
+src/.DS_Store
+src/main/.DS_Store
+src/main/resources/.DS_Store
+src/main/resources/assets/.DS_Store
+src/main/resources/assets/anothermod/.DS_Store
+src/main/resources/assets/anothermod/models/.DS_Store
+src/main/resources/assets/anothermod/textures/.DS_Store
+src/main/resources/assets/anothermod/textures/blocks/.DS_Store
+src/main/resources/assets/anothermod/textures/gui/.DS_Store
+src/main/resources/assets/anothermod/textures/items/.DS_Store
+#.gitignore#

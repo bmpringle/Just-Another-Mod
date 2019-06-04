@@ -1,0 +1,12 @@
+[{
+  "modid": "anothermod",
+  "name": "Just Another Mod",
+  "description": "All The Things!",
+  "version": "0.0.1",
+  "mcversion": "1.12.2",
+  "logoFile": "assets/anothermod/textures/logo.png",
+  "url": "google.com",
+  "updateJSON": "",
+  "authorList": ["Bmpawesome, The Internet"],
+  "credits": "I'd like to thank all the EPIC GAMERS."
+}]

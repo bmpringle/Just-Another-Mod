@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "IDI",
+        "GEG",
+        "IDI"
+    ],
+    "key": {
+        "I": {
+            "item": "anothermod:compressediron"
+        },
+        "G": {
+            "item": "anothermod:compressedgold"
+        },
+        "D": {
+            "item": "anothermod:compresseddiamond"
+        },
+        "E": {
+            "item": "anothermod:compressedemerald"
+        }
+    },
+    "result": {
+        "item": "anothermod:oregenerator"
+    }
+}

@@ -26,6 +26,8 @@ public class ModInProgress {
     public static ModInProgress instance;
 
     public static Logger logger;
+    
+    public static boolean ifDev = true;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {

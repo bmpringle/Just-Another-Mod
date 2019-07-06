@@ -68,19 +68,17 @@ public class OreGeneratorContainer extends Container {
         ItemStack itemstack = ItemStack.EMPTY;
         Slot slot = this.inventorySlots.get(index);
         
-        if (slot != null && slot.getHasStack()) {
-            ItemStack itemstack1 = slot.getStack();
-            itemstack = itemstack1.copy();
-
+        if (slot != null && slot.getHasStack()) { 
+            itemstack = slot.getStack();
             if (index < OreGeneratorTileEntity.SIZE) {
-                if (!this.mergeItemStack(itemstack1, OreGeneratorTileEntity.SIZE-1, this.inventorySlots.size(), true)) {
+                if (!this.mergeItemStack(itemstack, OreGeneratorTileEntity.SIZE, this.inventorySlots.size(), true)) {
                     return ItemStack.EMPTY;
                 }
-            } else if (!this.mergeItemStack(itemstack1, 0, OreGeneratorTileEntity.SIZE-1, false)) {
+            } else if (!this.mergeItemStack(itemstack, 0, OreGeneratorTileEntity.SIZE-1, false)) {
                 return ItemStack.EMPTY;
             }
 
-            if (itemstack1.isEmpty()) {
+            if (itemstack.isEmpty()) {
                 slot.putStack(ItemStack.EMPTY);
             } else {
                 slot.onSlotChanged();

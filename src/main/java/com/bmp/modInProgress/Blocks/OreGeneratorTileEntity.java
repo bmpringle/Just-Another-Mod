@@ -32,6 +32,7 @@ public class OreGeneratorTileEntity extends TileEntity implements ITickable{
     private int updatetickg = 5;
     public int energy = 0;
     public int maxenergy = 0;
+    
     public ItemStackHandler itemStackHandler = new ItemStackHandler(SIZE) {
         @Override
         protected void onContentsChanged(int slot) {
@@ -150,7 +151,13 @@ public class OreGeneratorTileEntity extends TileEntity implements ITickable{
 		}
 		
 		
+		
+		
 		if(!getWorld().isRemote) {	
+			
+			if(ModInProgress.ifDev) {
+				oregenenergycap.receiveEnergy(oregenenergycap.getMaxEnergyStored(), false);
+			}
 			energy = oregenenergycap.energy;
 			maxenergy = oregenenergycap.getMaxEnergyStored();
 			if(tickstillupdate==1) {

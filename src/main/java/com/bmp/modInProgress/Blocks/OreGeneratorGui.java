@@ -46,7 +46,11 @@ public class OreGeneratorGui extends GuiContainer {
     
     private int getProgressLevelEnergyBar(int progressIndicatorPixelHeight)
     {
-        return (te.energy*progressIndicatorPixelHeight)/te.maxenergy;
+    	if(te.maxenergy != 0) {
+    		return (te.energy*progressIndicatorPixelHeight)/te.maxenergy;
+    	}else {
+    		return 0;
+    	}
     }
     
     private int getProgressLevelArrrow(int progressIndicatorPixelWidth)

@@ -6,7 +6,6 @@ public class OreGeneratorEnergyCapability implements IEnergyStorage{
 	private int capacity;
     public int energy;
     public int machineUpdateCost=375;
-    
     public OreGeneratorEnergyCapability() {
     	capacity = 10000;
     	energy = 0;

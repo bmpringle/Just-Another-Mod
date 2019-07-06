@@ -39,7 +39,7 @@ public class OreGeneratorGui extends GuiContainer {
         //Good Ole' Fashioned Unreadable Collision Code!
     	if(mouseX >= guiLeft+6 && mouseX < guiLeft+26) {
     		if(mouseY >= guiTop+8 && mouseY < guiTop+59){
-    			drawHoveringText("Energy: " + te.energy, mouseX, mouseY);
+    			drawHoveringText("RF Energy: " + te.energy, mouseX, mouseY);
     		}	
     	}
     }

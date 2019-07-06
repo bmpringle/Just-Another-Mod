@@ -1,6 +1,8 @@
 package com.bmp.modInProgress.Proxies;
 
 import com.bmp.modInProgress.ModInProgress;
+import com.bmp.modInProgress.Blocks.CreativeGenerator;
+import com.bmp.modInProgress.Blocks.CreativeGeneratorTileEntity;
 import com.bmp.modInProgress.Blocks.ModBlocks;
 import com.bmp.modInProgress.Blocks.OreGenerator;
 import com.bmp.modInProgress.Blocks.OreGeneratorTileEntity;
@@ -13,7 +15,10 @@ import com.bmp.modInProgress.Items.Hammer;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -40,12 +45,18 @@ public class CommonProxy {
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
     	event.getRegistry().register(new OreGenerator());
+    	event.getRegistry().register(new CreativeGenerator());
     	GameRegistry.registerTileEntity(OreGeneratorTileEntity.class, ModInProgress.MODID + ":oregeneratorcontainerblock");
+    	GameRegistry.registerTileEntity(CreativeGeneratorTileEntity.class, ModInProgress.MODID + ":creativegeneratortileentity");
+    	FluidRegistry.registerFluid(ModInProgress.ELECTRIFIEDH2O);
+    	FluidRegistry.addBucketForFluid(ModInProgress.ELECTRIFIEDH2O);
+    	
     }
     
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
     	event.getRegistry().register(new ItemBlock(ModBlocks.oreGenerator).setRegistryName(ModBlocks.oreGenerator.getRegistryName()));
+    	event.getRegistry().register(new ItemBlock(ModBlocks.creativeGenerator).setRegistryName(ModBlocks.creativeGenerator.getRegistryName()));
     	event.getRegistry().register(new CompressedIron());
     	event.getRegistry().register(new CompressedGold());
     	event.getRegistry().register(new CompressedDiamond());

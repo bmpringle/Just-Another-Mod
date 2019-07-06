@@ -6,6 +6,8 @@ import org.apache.logging.log4j.Logger;
 
 import com.bmp.modInProgress.Proxies.CommonProxy;
 
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -26,9 +28,23 @@ public class ModInProgress {
     public static ModInProgress instance;
 
     public static Logger logger;
-    
-    public static boolean ifDev = true;
 
+    static {
+    	FluidRegistry.enableUniversalBucket();
+    }
+    
+    public static ModFluid ELECTRIFIEDH2O = (ModFluid) new ModFluid(
+    		   "electrifiedh2o", 
+    		   new ResourceLocation(MODID,"textures/blocks/fluids/electrifiedh2o_still.png"), 
+    		   new ResourceLocation(MODID, "textures/blocks/fluids/electrifiedh2o_flow.png")
+    		   )
+    		   .setDensity(1100)
+    		   .setGaseous(false)
+    		   .setLuminosity(9)
+    		   .setViscosity(25000)
+    		   .setTemperature(300);
+
+    
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         logger = event.getModLog();

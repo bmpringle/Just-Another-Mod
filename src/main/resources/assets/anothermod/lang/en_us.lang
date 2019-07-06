@@ -1,6 +1,8 @@
 tile.anothermod.oregenerator.name=Ore Generator
+tile.anothermod.creativegenerator.name=Creative Redstone Flux Generator
 item.anothermod.compressediron.name=Compressed Iron Plate
 item.anothermod.compressedgold.name=Compressed Gold Plate
 item.anothermod.compresseddiamond.name=Compressed Diamond Plate
 item.anothermod.compressedemerald.name=Compressed Emerald Plate
 item.anothermod.hammer.name=Hammer
+fluid.electrifiedh2o=Electrified H2O

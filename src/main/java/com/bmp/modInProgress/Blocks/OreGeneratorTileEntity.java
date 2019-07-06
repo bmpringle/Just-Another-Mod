@@ -154,10 +154,7 @@ public class OreGeneratorTileEntity extends TileEntity implements ITickable{
 		
 		
 		if(!getWorld().isRemote) {	
-			
-			if(ModInProgress.ifDev) {
-				oregenenergycap.receiveEnergy(oregenenergycap.getMaxEnergyStored(), false);
-			}
+	
 			energy = oregenenergycap.energy;
 			maxenergy = oregenenergycap.getMaxEnergyStored();
 			if(tickstillupdate==1) {
